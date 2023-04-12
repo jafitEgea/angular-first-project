@@ -1,0 +1,36 @@
+<!-- Class Binding -->
+<!-- <div>
+    <button [ngClass]="{
+        'disabled': button_disabled
+    }" class="btn btn-danger"  (click)="text_color = 'text-danger'">Red</button>
+    <button [ngClass]="{
+        'disabled': button_disabled
+    }" class="btn btn-primary mx-2" (click)="text_color = 'text-primary'">Blue</button>
+    <button [ngClass]="{
+        'disabled': button_disabled
+    }" class="btn btn-success mx-2" (click)="text_color = 'text-success'">Green</button>
+    <button [ngClass]="{
+        'disabled': button_disabled
+    }" class="btn btn-warning" (click)="text_color = 'text-warning'">Yellow</button>
+</div>
+
+<p [class]="text_color">Text changes its color</p> -->
+
+<!-- Property Binding -->
+
+<div>
+    <button [disabled]="button_disabled" class="btn btn-danger"  (click)="text_color = 'text-danger'">Red</button>
+    <button [disabled]="button_disabled" class="btn btn-primary mx-2" (click)="text_color = 'text-primary'">Blue</button>
+    <button [disabled]="button_disabled" class="btn btn-success mx-2" (click)="text_color = 'text-success'">Green</button>
+    <button [disabled]="button_disabled" class="btn btn-warning" (click)="text_color = 'text-warning'">Yellow</button>
+</div>
+
+<p>Text changes its color</p>
+<button class="btn btn-secondary" (click)="button_disabled = !button_disabled">Activar/Desactivar</button>
+
+<div>
+    <button class="btn btn-success" (click)="src= 'https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=600'">image 1</button>
+    <button class="btn btn-danger" (click)="src= 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=600'">image 2</button>
+    <br>
+    <img [src]="src" alt="example image">
+</div>

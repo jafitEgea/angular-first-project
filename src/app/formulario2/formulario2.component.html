@@ -1,0 +1,28 @@
+<p>formulario2 works!</p>
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="process()" #formContact = "ngForm">
+            <div class="mb-2">
+                <label class="form-label">Name:</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter your name" [(ngModel)]="person.name" 
+                required #name = 'ngModel'>
+                <div class="alert alert-warning mt-2" [hidden]="name.valid || name.pristine">
+                    Name is required
+                </div>
+            </div>
+            <div class="mb-2">
+                <label class="form-label">Age:</label>
+                <input type="number" min="13" class="form-control" name="age" placeholder="Enter your age" [(ngModel)]="person.age" 
+                required #age="ngModel">
+                <div class="alert alert-warning mt-2" [hidden]="age.valid || age.pristine">
+                    Age is required
+                </div>
+            </div>
+            <button class="btn btn-danger mt-2" [disabled]="formContact.invalid">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+
+{{formContact.valid}}
